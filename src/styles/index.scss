@@ -1,0 +1,46 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $Montserrat;
+  ul {
+    list-style: none;
+  }
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+  }
+}
+
+::selection {
+  background: $main-yellow;
+  color: #000;
+}
+
+$screen-md-min: 54.8rem;
+$screen-lg-min: 80rem;
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 80rem;
+}

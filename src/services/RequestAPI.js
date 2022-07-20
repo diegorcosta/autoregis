@@ -1,32 +1,31 @@
 import axios from "axios";
-// import { useState } from "react";
+import { useState } from "react";
+
+// import DisplayVehicles from "../../components/DisplayVehicles";
 
 const Request = () => {
   const url = "https://hlg-webmotors.sensedia.com/oauth/v1/access-token";
-
+  const endpoint = "https://hlg-webmotors.sensedia.com/site/v1/estoque/";
   const token =
     "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
 
-  // const [accessToken, setAccessToken] = useState("");
+  const [vehicles, setVehicle] = useState([]);
 
-  const endpoint = "https://hlg-webmotors.sensedia.com/site/v1/estoque/";
+  const requestAPI = axios.create({
+    baseURL: url,
+    headers: {
+      Authorization: `Basic ${token}`,
+      "Content-Type": "application/json",
+    },
+  });
 
-  axios
-    .post(
-      url,
-      {
-        username: "teste@doin.com.br",
-        password: "Teste@123",
-        integracaoSite: "true",
-        grant_type: "password",
-      },
-      {
-        headers: {
-          Authorization: `Basic ${token}`,
-          "Content-Type": "application/json",
-        },
-      }
-    )
+  requestAPI
+    .post(url, {
+      username: "teste@doin.com.br",
+      password: "Teste@123",
+      integracaoSite: "true",
+      grant_type: "password",
+    })
     .then(function (response) {
       axios
         .get(endpoint, {
@@ -37,7 +36,8 @@ const Request = () => {
           },
         })
         .then((response) => {
-          console.log(response.data);
+          setVehicle(response.data.hits);
+          console.log(vehicles.vehicle.model.name);
         })
         .catch((error) => {
           console.error(error);

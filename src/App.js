@@ -1,12 +1,11 @@
-import Request from "./services/api";
+import AppRoutes from "./routes/AppRoutes";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
-      <Request />
+      <AppRoutes />
     </div>
   );
-}
+};
 
 export default App;
