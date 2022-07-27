@@ -13,7 +13,7 @@ const MainContact = () => {
           contato conosco!
         </p>
         <div className="contact-form-area">
-          <div className="column">
+          <div>
             <form>
               <input type="name" placeholder="Nome" name="name" required />
               <input type="email" placeholder="E-mail" name="email" required />
@@ -23,16 +23,20 @@ const MainContact = () => {
                 name="phone"
                 required
               />
-              <input
-                type="subject"
-                placeholder="Assunto"
-                name="subject"
-                required
-              />
+              <select type="subject" name="subject" required>
+                <option selected disabled>
+                  Assunto
+                </option>
+                <option value="compra">Compra</option>
+                <option value="venda">Venda</option>
+                <option value="financiamento">Financiamento</option>
+                <option value="outros">Outros</option>
+              </select>
               <textarea
                 type="text"
-                placeholder="Escreva sua mensagem"
+                maxlength="500"
                 name="message"
+                placeholder="Escreva sua mensagem"
                 required
               />
               <button type="submit" name="submit">
@@ -40,14 +44,14 @@ const MainContact = () => {
               </button>
             </form>
           </div>
-          <div className="column">
+          <div>
             <ul className="contact-list">
               <li>
                 <MdLocationOn />
-                <span>
+                <div>
                   <p>R. Janúncio Ferreira, 600 - Centro</p>
                   <p>Campina Grande - PB</p>
-                </span>
+                </div>
               </li>
               <li>
                 <MdEmail />
@@ -59,10 +63,10 @@ const MainContact = () => {
               </li>
               <li>
                 <RiInstagramFill />
-                <span>
+                <div>
                   <p>@autoregiscg</p>
                   <p>@autoregisparts</p>
-                </span>
+                </div>
               </li>
             </ul>
           </div>
