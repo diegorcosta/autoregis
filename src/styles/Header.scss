@@ -1,7 +1,7 @@
 @import "./index.scss";
 
 .main-header {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0;
   width: 100%;
@@ -12,7 +12,8 @@
     justify-content: space-between;
     .logo {
       height: auto;
-      width: 180px;
+      margin-top: 2px;
+      width: 160px;
       transition: 0.3s ease opacity;
       :hover,
       :active {
@@ -30,6 +31,7 @@
       width: 50%;
       z-index: 998;
       ul {
+        margin-top: 40px;
         li {
           align-items: center;
           display: flex;
@@ -58,6 +60,7 @@
         width: auto;
         ul {
           display: flex;
+          margin-top: 0;
           li {
             margin: 0;
           }

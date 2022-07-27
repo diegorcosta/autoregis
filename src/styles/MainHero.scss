@@ -1,0 +1,86 @@
+@import "./index.scss";
+
+.main-hero {
+  .first-row {
+    align-items: center;
+    background: url("../images/main-hero.png") no-repeat center center;
+    background-size: auto;
+    display: flex;
+    height: 380px;
+    margin: 0 auto;
+    .hero-text {
+      margin-top: 70px;
+      text-align: center;
+      width: 100%;
+      h1 {
+        color: $main-yellow;
+        font-size: 2.6rem;
+      }
+      p {
+        color: #fff;
+        font-size: 1.4rem;
+        margin-top: 20px;
+      }
+      @include md {
+        text-align: left;
+        width: 45%;
+      }
+    }
+  }
+  .second-row {
+    align-items: center;
+    background: linear-gradient(
+      180deg,
+      rgba(168, 168, 168, 0.5) 0%,
+      rgba(196, 196, 196, 0) 100%
+    );
+    display: flex;
+    height: 120px;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      .first-column {
+        margin: 0 auto;
+        button {
+          align-items: center;
+          background-color: #25d366;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          display: flex;
+          font-family: $Montserrat;
+          font-size: 1.6rem;
+          font-weight: 600;
+          height: 50px;
+          svg {
+            background-color: #075e54;
+            padding: 12px;
+            height: 50px;
+            width: 50px;
+          }
+          span {
+            padding: 0 20px;
+          }
+        }
+        button:hover,
+        button:active {
+          filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.15));
+        }
+        @include md {
+          margin-left: 0;
+        }
+      }
+      .second-column {
+        display: none;
+        width: 60%;
+        img {
+          width: 100%;
+          margin-top: -35%;
+        }
+        @include md {
+          display: initial;
+        }
+      }
+    }
+  }
+}

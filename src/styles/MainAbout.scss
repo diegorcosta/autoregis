@@ -1,0 +1,26 @@
+@import "./index.scss";
+
+.main-about {
+  background: url("../images/main-about.png") no-repeat center center;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+  a {
+    button {
+      background-color: $main-yellow;
+      border: none;
+      color: #000;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 20px 40px;
+      margin-top: 40px;
+      text-transform: uppercase;
+      transition: 0.2s ease all;
+    }
+    button:hover,
+    button:active {
+      color: #fff;
+    }
+  }
+}

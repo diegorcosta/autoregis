@@ -1,0 +1,29 @@
+@import "./index.scss";
+
+.main-contact {
+  padding: 60px 0;
+  text-align: center;
+  .contact-form-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    @include md {
+      flex-direction: row;
+    }
+  }
+  .contact-list {
+    li {
+      align-items: center;
+      display: flex;
+      margin-bottom: 30px;
+      text-align: left;
+      svg {
+        color: $main-yellow;
+        font-size: 2rem;
+      }
+      p {
+        margin-left: 20px;
+      }
+    }
+  }
+}
