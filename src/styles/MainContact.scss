@@ -1,6 +1,7 @@
 @import "./index.scss";
 
 .main-contact {
+  background: url("../images/bg-gradient.png") repeat-x top center;
   padding: 60px 0;
   text-align: center;
   .contact-form-area {
@@ -91,6 +92,9 @@
         p {
           margin-left: 20px;
         }
+      }
+      li:last-child {
+        margin-bottom: 0;
       }
     }
   }

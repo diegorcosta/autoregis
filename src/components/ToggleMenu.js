@@ -3,6 +3,9 @@ const ToggleMenu = ({ isMenuOpen }) => {
     <nav className={`main-menu ${isMenuOpen ? "menu-open" : ""}`}>
       <ul>
         <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
           <a href="/empresa">Empresa</a>
         </li>
         <li>
