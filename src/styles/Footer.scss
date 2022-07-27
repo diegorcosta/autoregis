@@ -1,0 +1,18 @@
+@import "./index.scss";
+
+.main-footer {
+  width: 100%;
+  .map {
+    iframe {
+      border: none;
+      height: 340px;
+      width: 100%;
+    }
+  }
+  .copyright {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+}
