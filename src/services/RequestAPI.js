@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
+import defaultImg from "../images/default-img.png";
+
 const Request = () => {
   const url = "https://hlg-webmotors.sensedia.com/oauth/v1/access-token";
   const endpoint = "https://hlg-webmotors.sensedia.com/site/v1/estoque/";
@@ -52,7 +54,11 @@ const Request = () => {
         {vehicles?.map((car) => (
           <li key={car.id}>
             <div className="img-box">
-              <img src={car.photos?.[0]} alt={car.vehicle.model.name} />
+              {car.photos?.[0] ? (
+                <img src={car.photos[0]} alt={car.vehicle.model.name} />
+              ) : (
+                <img src={defaultImg} alt="Sem fotos" />
+              )}
             </div>
             <div className="vehicle-info">
               <h3>{car.vehicle.model.name}</h3>
