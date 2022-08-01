@@ -4,8 +4,10 @@ import MainStock from "../components/MainStock";
 import MainAbout from "../components/MainAbout";
 import MainContact from "../components/MainContact";
 import Footer from "../components/Footer";
+import setTitle from "../components/SetTitle";
 
 const Home = () => {
+  setTitle("Home - autoRÉGIS");
   return (
     <main>
       <Header />
