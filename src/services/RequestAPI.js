@@ -2,22 +2,22 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Request = () => {
-  const [vehicles, setVehicles] = useState([]);
-
   const url = "https://hlg-webmotors.sensedia.com/oauth/v1/access-token";
   const endpoint = "https://hlg-webmotors.sensedia.com/site/v1/estoque/";
   const token =
     "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
 
-  const requestAPI = axios.create({
-    baseURL: url,
-    headers: {
-      Authorization: `Basic ${token}`,
-      "Content-Type": "application/json",
-    },
-  });
+  const [vehicles, setVehicles] = useState([]);
 
   useEffect(() => {
+    const requestAPI = axios.create({
+      baseURL: url,
+      headers: {
+        Authorization: `Basic ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
+
     requestAPI
       .post(url, {
         username: "teste@doin.com.br",
@@ -36,7 +36,6 @@ const Request = () => {
           })
           .then((res) => {
             setVehicles(res.data.hits);
-            console.log(vehicles);
           })
           .catch((err) => {
             console.error(err);
@@ -50,11 +49,15 @@ const Request = () => {
   return (
     <div className="vehicles">
       <ul>
-        {vehicles.map((car) => (
+        {vehicles?.map((car) => (
           <li key={car.id}>
-            <h3>
-              {car.vehicle.model.name}
-            </h3>
+            <div className="img-box">
+              <img src={car.photos?.[0]} alt={car.vehicle.model.name} />
+            </div>
+            <div className="vehicle-info">
+              <h3>{car.vehicle.model.name}</h3>
+              <h4>{car.vehicle.brand.name}</h4>
+            </div>
           </li>
         ))}
       </ul>

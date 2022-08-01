@@ -53,6 +53,12 @@ $screen-lg-min: 80rem;
   @include md {
     font-size: 1.3rem;
   }
+  a, a:visited {
+    color: $main-yellow;
+    font-weight: 600;
+  } a:hover, a:active {
+    text-decoration: underline;
+  }
 }
 
 .title {

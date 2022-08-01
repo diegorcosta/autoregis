@@ -4,4 +4,60 @@
   background: url("../images/bg-gradient.png") repeat-x top center;
   padding: 60px 0;
   text-align: center;
+  .vehicles {
+    margin-bottom: 40px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        box-sizing: content-box;
+        position: relative;
+        margin-top: 30px;
+        max-width: 320px;
+        .img-box {
+          img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .vehicle-info {
+          background-color: rgba(0, 0, 0, 0.8);
+          color: #fff;
+          padding: 20px 30px;
+          position: absolute;
+          text-align: left;
+          bottom: 0;
+          width: 100%;
+          z-index: 990;
+          h3 {
+            color: $main-yellow;
+            font-size: 1.4rem;
+          }
+          h4 {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 5px;
+          }
+          .details {
+            border-top: 1px solid #fff;
+            display: flex;
+            justify-content: space-between;
+            p {
+              align-items: center;
+              display: flex;
+              font-size: 0.875rem;
+              padding: 15px 0;
+              svg {
+                font-size: 1rem;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

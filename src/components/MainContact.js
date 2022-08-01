@@ -24,7 +24,7 @@ const MainContact = () => {
                 required
               />
               <select type="subject" name="subject" required>
-                <option disabled>
+                <option selected disabled>
                   Assunto
                 </option>
                 <option value="compra">Compra</option>

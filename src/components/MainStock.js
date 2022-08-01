@@ -7,6 +7,9 @@ const MainStock = () => {
       <div className="container">
         <h2 className="title">Novidades do estoque</h2>
         <Request />
+        <p className="main-text">
+          Confira nosso estoque completo <a href="/veiculos">clicando aqui</a>.
+        </p>
       </div>
     </section>
   );
