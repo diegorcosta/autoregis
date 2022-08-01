@@ -54,7 +54,7 @@ const Request = () => {
   if (loading) {
     return (
       <h3 className="loading">
-        <img src={loadingSVG} />
+        <img src={loadingSVG} alt="Carregando" />
         Carregando...
       </h3>
     );
