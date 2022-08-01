@@ -4,13 +4,25 @@
   background: url("../images/bg-gradient.png") repeat-x top center;
   padding: 60px 0;
   text-align: center;
+  .loading {
+    h3 {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+      img {
+        margin-right: 20px;
+        width: 40px;
+      }
+    }
+  }
   .vehicles {
     margin-bottom: 40px;
     ul {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
       li {
         box-sizing: content-box;
         position: relative;
@@ -34,7 +46,7 @@
           z-index: 990;
           h3 {
             color: $main-yellow;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
           }
           h4 {
             font-size: 1rem;

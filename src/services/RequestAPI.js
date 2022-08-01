@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 import defaultImg from "../images/default-img.png";
+import loadingSVG from "../images/loading.svg";
 
 const Request = () => {
   const url = "https://hlg-webmotors.sensedia.com/oauth/v1/access-token";
@@ -10,6 +11,7 @@ const Request = () => {
     "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
 
   const [vehicles, setVehicles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const requestAPI = axios.create({
@@ -38,6 +40,7 @@ const Request = () => {
           })
           .then((res) => {
             setVehicles(res.data.hits);
+            setLoading(false);
           })
           .catch((err) => {
             console.error(err);
@@ -47,6 +50,15 @@ const Request = () => {
         console.log(error);
       });
   }, []);
+
+  if (loading) {
+    return (
+      <h3 className="loading">
+        <img src={loadingSVG} />
+        Carregando...
+      </h3>
+    );
+  }
 
   return (
     <div className="vehicles">
