@@ -63,7 +63,7 @@ const Request = () => {
   return (
     <div className="vehicles">
       <ul>
-        {vehicles?.map((car) => (
+        {vehicles?.slice(0, 9).map((car) => (
           <li key={car.id}>
             <div className="img-box">
               {car.photos?.[0] ? (
