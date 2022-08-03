@@ -9,3 +9,59 @@
     font-size: 2.6rem;
   }
 }
+
+.page {
+  padding: 60px 0;
+  .store-front {
+    height: 420px;
+    margin-bottom: 40px;
+    object-fit: cover;
+    width: 100%;
+    @include md {
+      max-width: 80%;
+    }
+  }
+  .page-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      @include md {
+        max-width: 80%;
+      }
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.mvv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  width: 100%;
+  @include md {
+    flex-direction: row;
+  }
+  li {
+    h2 {
+      align-items: center;
+      display: flex;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      svg {
+        color: $main-yellow;
+        font-size: 2.4rem;
+        margin-right: 15px;
+      }
+    }
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}
