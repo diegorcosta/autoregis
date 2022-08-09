@@ -6,11 +6,11 @@ import PageTitle from "../components/PageTitle";
 import "../styles/Page.scss";
 
 const Empresa = () => {
-  setTitle("Venda - autoRÉGIS");
+  setTitle("Financiamento - autoRÉGIS");
   return (
     <main>
       <Header />
-      <PageTitle title="Venda" />
+      <PageTitle title="Financiamento" />
       <section className="page"></section>
       <Footer />
     </main>

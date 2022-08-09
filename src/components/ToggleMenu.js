@@ -12,7 +12,7 @@ const ToggleMenu = ({ isMenuOpen }) => {
           <a href="/veiculos">Veículos</a>
         </li>
         <li>
-          <a href="/financie">Financie</a>
+          <a href="/financiamento">Financiamento</a>
         </li>
         <li>
           <a href="/venda">Venda</a>

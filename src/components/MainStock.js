@@ -6,7 +6,7 @@ const MainStock = () => {
     <section className="main-stock">
       <div className="container">
         <h2 className="title">Novidades do estoque</h2>
-        <Request />
+        <Request qty="9" />
         <p className="main-text">
           Confira nosso estoque completo <a href="/veiculos">clicando aqui</a>.
         </p>

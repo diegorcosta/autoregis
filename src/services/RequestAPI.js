@@ -4,13 +4,14 @@ import { useEffect, useState } from "react";
 import defaultImg from "../images/default-img.png";
 import loadingSVG from "../images/loading.svg";
 
-const Request = () => {
+const Request = (props) => {
   const url = "https://hlg-webmotors.sensedia.com/oauth/v1/access-token";
-  const endpoint = "https://hlg-webmotors.sensedia.com/site/v1/estoque/";
+  const endpoint = `https://hlg-webmotors.sensedia.com/site/v1/estoque?qty=${props.qty}&${props.page}`;
   const token =
     "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
 
   const [vehicles, setVehicles] = useState([]);
+  const [pages, setPages] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -40,6 +41,7 @@ const Request = () => {
           })
           .then((res) => {
             setVehicles(res.data.hits);
+            setPages(res.data.total);
             setLoading(false);
           })
           .catch((err) => {
@@ -50,6 +52,10 @@ const Request = () => {
         console.log(error);
       });
   }, []);
+
+  const page = pages / 12;
+
+  console.log(page);
 
   if (loading) {
     return (
@@ -62,8 +68,8 @@ const Request = () => {
 
   return (
     <div className="vehicles">
-      <ul>
-        {vehicles?.slice(0, 9).map((car) => (
+      <ul className="vehicles-cards">
+        {vehicles?.map((car) => (
           <li key={car.id}>
             <div className="img-box">
               {car.photos?.[0] ? (
