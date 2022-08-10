@@ -114,7 +114,7 @@
     }
     .contact-list {
       li {
-        align-items: center;
+        align-items: flex-start;
         display: flex;
         margin-bottom: 30px;
         text-align: left;
@@ -123,6 +123,7 @@
           font-size: 1.8rem;
         }
         p {
+          margin-top: 5px;
           margin-left: 20px;
         }
       }
