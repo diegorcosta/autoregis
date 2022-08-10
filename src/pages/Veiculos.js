@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import PageTitle from "../components/PageTitle";
 import Footer from "../components/Footer";
 import setTitle from "../components/SetTitle";
-import Request from "../services/RequestAPI";
+// import Request from "../services/RequestAPI";
 
 const Veiculos = () => {
   setTitle("Veículos - autoRÉGIS");

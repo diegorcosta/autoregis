@@ -6,7 +6,6 @@ import loadingSVG from "../images/loading.svg";
 
 const Request = (props) => {
   const url = "https://hlg-webmotors.sensedia.com/oauth/v1/access-token";
-  const endpoint = `https://hlg-webmotors.sensedia.com/site/v1/estoque?qty=${props.qty}&${props.page}`;
   const token =
     "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
 
@@ -15,6 +14,8 @@ const Request = (props) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const endpoint = `https://hlg-webmotors.sensedia.com/site/v1/estoque?qty=${props.qty}&${props.page}`;
+
     const requestAPI = axios.create({
       baseURL: url,
       headers: {
@@ -51,6 +52,7 @@ const Request = (props) => {
       .catch(function (error) {
         console.log(error);
       });
+    // eslint-disable-next-line
   }, []);
 
   const page = pages / 12;
