@@ -10,7 +10,7 @@ const WhatsAppButton = () => {
       target="_blank"
       rel="noreferrer"
     >
-      <button type="button">
+      <button className="whatsapp-button" type="button">
         <BsWhatsapp />
         <span>(83) 9 9935-5058</span>
       </button>

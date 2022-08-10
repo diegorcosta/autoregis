@@ -1,6 +1,6 @@
 @import "./index.scss";
 
-button {
+.whatsapp-button {
   align-items: center;
   background-color: #25d366;
   border: none;
@@ -22,7 +22,7 @@ button {
     padding: 0 20px;
   }
 }
-button:hover,
-button:active {
+.whatsapp-button:hover,
+.whatsapp-button:active {
   filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.15));
 }
