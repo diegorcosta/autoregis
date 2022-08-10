@@ -11,9 +11,7 @@ const Veiculos = () => {
       <Header />
       <PageTitle title="Veículos" />
       <section className="page">
-        <div className="container">
-          <Request qty="12" />
-        </div>
+        <div className="container">{/* <Request qty="12" /> */}</div>
       </section>
       <Footer />
     </main>
