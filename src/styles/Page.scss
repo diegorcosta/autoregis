@@ -42,8 +42,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
-    @include md {
+    @include lg {
       align-items: flex-start;
       flex-direction: row;
       justify-content: space-between;
@@ -51,7 +50,7 @@
     div:first-child {
       width: 100%;
       margin-bottom: 40px;
-      @include md {
+      @include lg {
         margin-bottom: 0x;
         padding-right: 20px;
         width: 72%;
