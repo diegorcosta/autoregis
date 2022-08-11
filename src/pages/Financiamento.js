@@ -28,7 +28,7 @@ const Financiamento = () => {
                 E-mail <span>(campo obrigatório)</span>
               </label>
               <input type="email" name="email" required />
-              <label for="gender">
+              {/* <label for="gender">
                 Sexo <span>(campo obrigatório)</span>
               </label>
               <div className="radio-input">
@@ -39,10 +39,10 @@ const Financiamento = () => {
                 <div className="radio">
                   <input id="female" type="radio" name="gender" required />
                   <label for="female">Feminino</label>
-                </div>
-              </div>
+                </div> */}
+              {/* </div> */}
               <div className="flex-items">
-                <div className="item">
+                {/* <div className="item">
                   <label for="marital-status">
                     Estado Civil <span>(campo obrigatório)</span>
                   </label>
@@ -53,12 +53,20 @@ const Financiamento = () => {
                     <option value="solteiro">Viuvo(a)</option>
                     <option value="solteiro">Outros</option>
                   </select>
+                </div> */}
+                <div className="item">
+                  <label for="cpf">
+                    CPF <span>(campo obrigatório)</span>
+                  </label>
+                  <input type="number" name="cpf" required />
                 </div>
                 <div className="item">
-                  <label for="cpf">CPF</label>
-                  <input type="number" name="cpf" />
+                  <label for="date">
+                    Data de nascimento <span>(campo obrigatório)</span>
+                  </label>
+                  <input type="date" name="date" required />
                 </div>
-                <div className="item">
+                {/* <div className="item">
                   <label for="rg">RG</label>
                   <input type="number" name="rg" />
                 </div>
@@ -66,6 +74,7 @@ const Financiamento = () => {
                   <label for="agency">Órgão emissor</label>
                   <input type="text" name="agency" />
                 </div>
+                
                 <div className="item">
                   <label for="date">Data de emissão</label>
                   <input type="date" name="date" />
@@ -85,9 +94,9 @@ const Financiamento = () => {
                 <div className="item">
                   <label for="mother">Nome da mãe</label>
                   <input type="text" name="mother" />
-                </div>
+                </div> */}
               </div>
-              <h3>Dados Residenciais</h3>
+              {/* <h3>Dados Residenciais</h3>
               <div className="flex-items">
                 <div className="item">
                   <label for="address">
@@ -380,10 +389,10 @@ const Financiamento = () => {
                   />
                   <label for="property-no">Não</label>
                 </div>
-              </div>
+              </div> */}
               <h3>Formas de financiamento</h3>
               <div className="flex-items">
-                <div className="item">
+                {/* <div className="item">
                   <label for="financing-brand">
                     Marca <span>(campo obrigatório)</span>
                   </label>
@@ -406,13 +415,13 @@ const Financiamento = () => {
                     Cor <span>(campo obrigatório)</span>
                   </label>
                   <input type="text" name="financing-color" required />
-                </div>
-                <div className="item">
+                </div> */}
+                {/* <div className="item">
                   <label for="financing-price">
                     Preço <span>(campo obrigatório)</span>
                   </label>
                   <input type="text" name="financing-price" required />
-                </div>
+                </div> */}
                 <div className="item">
                   <label for="financing-entry">
                     Entrada <span>(campo obrigatório)</span>
