@@ -28,15 +28,15 @@
       transform: translateX(-100%);
       transition: 0.3s;
       top: 0;
-      width: 50%;
+      width: 60%;
       z-index: 998;
       ul {
         margin-top: 40px;
         li {
           align-items: center;
           display: flex;
-          margin: 30px;
-          padding: 0 10px;
+          margin: 20px 0;
+          padding: 0 20px;
           a,
           a:visited {
             padding: 10px 20px;

@@ -46,6 +46,10 @@
             color: $main-yellow;
             font-size: 1.3rem;
           }
+          h3:hover,
+          h3:active {
+            text-decoration: underline;
+          }
           h4 {
             font-size: 1rem;
             font-weight: 400;

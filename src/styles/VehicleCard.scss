@@ -1,0 +1,110 @@
+@import "./index.scss";
+
+.vehicle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  h2 {
+    color: $main-yellow;
+    font-size: 1.6rem;
+  }
+  h3 {
+    margin-top: 20px;
+    font-size: 1.6rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 40px;
+    width: 100%;
+    @include md {
+      margin-top: 0;
+      width: 56%;
+    }
+    li {
+      align-items: center;
+      border-top: 1px solid #ddd;
+      display: flex;
+      margin-top: 5px;
+      padding: 10px 0;
+    }
+    svg {
+      fill: $main-yellow;
+      font-size: 1.3rem;
+      margin-right: 15px;
+    }
+    p {
+      align-items: center;
+      display: flex;
+      font-size: 1rem;
+      margin-top: 5px;
+      word-break: break-all;
+    }
+    .description {
+      background-color: #f8f8f8;
+      margin: 30px 0;
+      padding: 30px;
+    }
+  }
+  .gallery {
+    width: 100%;
+    @include md {
+      width: 40%;
+    }
+    .photos {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+      li {
+        margin-top: 10px;
+        width: 48%;
+        img {
+          height: 140px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .featuredImage {
+      position: relative;
+      .navigation {
+        align-items: center;
+        display: flex;
+        position: absolute;
+        height: 320px;
+        width: 100%;
+        .btn-prev,
+        .btn-next {
+          cursor: pointer;
+          position: absolute;
+          font-size: 2rem;
+          color: #fff;
+          opacity: 0.9;
+        }
+        .btn-prev {
+          left: 10px;
+        }
+        .btn-next {
+          right: 10px;
+        }
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 320px;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import defaultImg from "../images/default-img.png";
 import loadingSVG from "../images/loading.svg";
@@ -10,7 +11,6 @@ const Request = (props) => {
     "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
 
   const [vehicles, setVehicles] = useState([]);
-  const [pages, setPages] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -42,7 +42,6 @@ const Request = (props) => {
           })
           .then((res) => {
             setVehicles(res.data.hits);
-            setPages(res.data.total);
             setLoading(false);
           })
           .catch((err) => {
@@ -54,10 +53,6 @@ const Request = (props) => {
       });
     // eslint-disable-next-line
   }, []);
-
-  const page = pages / 12;
-
-  console.log(page);
 
   if (loading) {
     return (
@@ -81,7 +76,13 @@ const Request = (props) => {
               )}
             </div>
             <div className="vehicle-info">
-              <h3>{car.vehicle.model.name}</h3>
+              <Link
+                to={{
+                  pathname: `veiculos/${car.id}`,
+                }}
+              >
+                <h3>{car.vehicle.model.name}</h3>
+              </Link>
               <h4>{car.vehicle.brand.name}</h4>
             </div>
           </li>

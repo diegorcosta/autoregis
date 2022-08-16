@@ -11,7 +11,19 @@
 }
 
 .page {
+  background: url("../images/bg-gradient.png") repeat-x top center;
+  overflow: hidden;
   padding: 60px 0;
+  .loading {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    img {
+      margin-right: 20px;
+      width: 40px;
+    }
+  }
   .store-front {
     height: 380px;
     margin-bottom: 40px;
