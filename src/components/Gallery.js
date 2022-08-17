@@ -35,7 +35,7 @@ const Gallery = ({ galleryImages }) => {
       )}
       <ul className="photos">
         {galleryImages &&
-          galleryImages.map((slide, index) => {
+          galleryImages.slice(0, 4).map((slide, index) => {
             return (
               <li
                 className="single"

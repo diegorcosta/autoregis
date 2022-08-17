@@ -8,12 +8,19 @@
     flex-direction: row;
     justify-content: space-between;
   }
+  .default-image {
+    width: 100%;
+    object-fit: cover;
+    height: 320px;
+  }
   h2 {
     color: $main-yellow;
     font-size: 1.6rem;
   }
   h3 {
-    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
     font-size: 1.6rem;
   }
   h4 {
@@ -40,7 +47,7 @@
       padding: 10px 0;
     }
     svg {
-      fill: $main-yellow;
+      fill: #ccc;
       font-size: 1.3rem;
       margin-right: 15px;
     }
@@ -55,6 +62,42 @@
       background-color: #f8f8f8;
       margin: 30px 0;
       padding: 30px;
+    }
+    .interest {
+      align-items: baseline;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-between;
+      p {
+        margin-bottom: 20px;
+      }
+      @include md {
+        flex-direction: row;
+        justify-content: flex-start;
+        p {
+          margin-bottom: 0;
+          margin-right: 30px;
+        }
+      }
+      a {
+        button {
+          background-color: $main-yellow;
+          border: none;
+          color: #000;
+          cursor: pointer;
+          font-size: 1.1rem;
+          font-weight: 600;
+          padding: 20px 40px;
+          text-transform: uppercase;
+          transition: 0.2s ease all;
+        }
+        button:hover,
+        button:active {
+          background-color: #000;
+          color: #fff;
+        }
+      }
     }
   }
   .gallery {

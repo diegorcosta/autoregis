@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+import { AiFillTag } from "react-icons/ai";
 import { IoMdColorFill } from "react-icons/io";
 import { IoCalendar, IoSpeedometer } from "react-icons/io5";
 import { GoVersions } from "react-icons/go";
@@ -99,7 +100,11 @@ const VehicleCard = () => {
               {details.photos?.[0] ? (
                 <Gallery galleryImages={details.photos} />
               ) : (
-                <img src={defaultImg} alt="Sem fotos" />
+                <img
+                  className="default-image"
+                  src={defaultImg}
+                  alt="Sem fotos"
+                />
               )}
             </div>
             <ul className="details">
@@ -135,14 +140,22 @@ const VehicleCard = () => {
                   <p>Final da placa: ***.***{details.vehicle.plate_final}</p>
                 </div>
               </li>
-              <h3>R$ {details.price}</h3>
+              <h3>
+                <AiFillTag className="price-tag" />
+                R$ {details.price}
+              </h3>
               <div className="description">
                 <p>
                   <b>Detalhes</b>
                 </p>
                 <p>{details.details}</p>
               </div>
-              <div className="interest"></div>
+              <div className="interest">
+                <p>Solicite uma proposta!</p>
+                <a href="contato">
+                  <button type="button">Fale conosco</button>
+                </a>
+              </div>
             </ul>
           </div>
         </div>
