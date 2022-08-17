@@ -91,7 +91,7 @@ const VehicleCard = () => {
   return (
     <main>
       <Header />
-      <PageTitle title="Veículos" />
+      <PageTitle title={details.vehicle.model.name} />
       <section className="page">
         <div className="container">
           <div className="vehicle">
@@ -108,19 +108,19 @@ const VehicleCard = () => {
               <li>
                 <IoCalendar />
                 <div>
-                  <p>{details.vehicle.year_model}</p>
+                  <p>Ano: {details.vehicle.year_model}</p>
                 </div>
               </li>
               <li>
                 <GoVersions />
                 <div>
-                  <p>{details.vehicle.version.name}</p>
+                  <p>Versão: {details.vehicle.version.name}</p>
                 </div>
               </li>
               <li>
                 <IoMdColorFill />
                 <div>
-                  <p>{details.vehicle.color.name}</p>
+                  <p>Cor: {details.vehicle.color.name}</p>
                 </div>
               </li>
               <li>
@@ -132,7 +132,7 @@ const VehicleCard = () => {
               <li>
                 <FaCar />
                 <div>
-                  <p>***.***{details.vehicle.plate_final}</p>
+                  <p>Final da placa: ***.***{details.vehicle.plate_final}</p>
                 </div>
               </li>
               <h3>R$ {details.price}</h3>
@@ -142,6 +142,7 @@ const VehicleCard = () => {
                 </p>
                 <p>{details.details}</p>
               </div>
+              <div className="interest"></div>
             </ul>
           </div>
         </div>

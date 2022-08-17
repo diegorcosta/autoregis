@@ -6,7 +6,10 @@
   padding: 120px 0 40px 0;
   h1 {
     color: $main-yellow;
-    font-size: 2.6rem;
+    font-size: 2rem;
+    @include md {
+      font-size: 2.6rem;
+    }
   }
 }
 
