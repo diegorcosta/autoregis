@@ -70,7 +70,14 @@ const Request = (props) => {
           <li key={car.id}>
             <div className="img-box">
               {car.photos?.[0] ? (
-                <img src={car.photos[0]} alt={car.vehicle.model.name} />
+                <img
+                  src={car.photos[0]}
+                  alt={car.vehicle.model.name}
+                  onError={(e) => {
+                    e.target.src = defaultImg;
+                    e.target.onError = null;
+                  }}
+                />
               ) : (
                 <img src={defaultImg} alt="Sem fotos" />
               )}
@@ -78,7 +85,7 @@ const Request = (props) => {
             <div className="vehicle-info">
               <Link
                 to={{
-                  pathname: `veiculos/${car.id}`,
+                  pathname: `/${car.id}`,
                 }}
               >
                 <h3>{car.vehicle.model.name}</h3>
