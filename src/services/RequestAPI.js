@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+import Pagination from "../components/Pagination";
+
 import defaultImg from "../images/default-img.png";
 import loadingSVG from "../images/loading.svg";
 
@@ -12,9 +14,12 @@ const Request = (props) => {
 
   const [vehicles, setVehicles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [current, setCurrent] = useState(0);
+  const [offset, setOffset] = useState(0);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const endpoint = `https://hlg-webmotors.sensedia.com/site/v1/estoque?qty=${props.qty}&${props.page}`;
+    const endpoint = `https://hlg-webmotors.sensedia.com/site/v1/estoque?qty=${props.qty}&p=${current}`;
 
     const requestAPI = axios.create({
       baseURL: url,
@@ -42,6 +47,7 @@ const Request = (props) => {
           })
           .then((res) => {
             setVehicles(res.data.hits);
+            setTotal(res.data.total);
             setLoading(false);
           })
           .catch((err) => {
@@ -52,7 +58,7 @@ const Request = (props) => {
         console.log(error);
       });
     // eslint-disable-next-line
-  }, []);
+  }, [current]);
 
   if (loading) {
     return (
@@ -95,6 +101,15 @@ const Request = (props) => {
           </li>
         ))}
       </ul>
+      <Pagination
+        limit={props.qty}
+        total={total}
+        current={current}
+        setCurrent={setCurrent}
+        offset={offset}
+        setOffset={setOffset}
+        setLoading={setLoading}
+      />
     </div>
   );
 };
