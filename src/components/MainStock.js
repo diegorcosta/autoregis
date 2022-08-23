@@ -95,7 +95,7 @@ const MainStock = () => {
                 <div className="vehicle-info">
                   <Link
                     to={{
-                      pathname: `veiculos/${car.id}`,
+                      pathname: `/${car.id}`,
                     }}
                   >
                     <h3>{car.vehicle.model.name}</h3>
