@@ -1,3 +1,6 @@
+import { RiInstagramFill, RiWhatsappFill } from "react-icons/ri";
+import { MdEmail } from "react-icons/md";
+
 import "../styles/Footer.scss";
 
 const Footer = () => {
@@ -6,12 +9,48 @@ const Footer = () => {
 
   return (
     <footer className="main-footer">
-      <address className="map">
-        <iframe
-          title="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.2203832176947!2d-35.88306198464042!3d-7.215683472851996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ac1e52cf3b0aaf%3A0x955681d84ea2076!2sR.%20Jan%C3%BAncio%20Ferreira%2C%20600%20-%20Centro%2C%20Campina%20Grande%20-%20PB%2C%2058400-198!5e0!3m2!1spt-BR!2sbr!4v1658941000062!5m2!1spt-BR!2sbr"
-        ></iframe>
-      </address>
+      <div className="social-media">
+        <div className="container">
+          <ul>
+            <li>
+              <a href="mailto:autoregiscg@hotmail.com">
+                <MdEmail />
+                autoregiscg@hotmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://instagram.com/autoregiscg"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <RiInstagramFill />
+                autoregiscg
+              </a>
+            </li>
+            <li>
+              <a
+                href="http://instagram.com/autoregisparts"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <RiInstagramFill />
+                autoregisparts
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send?phone=558399355058"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <RiWhatsappFill />
+                (83) 9 9935-5058
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <div className="copyright">
         <div className="container">
           <div>© {year} - autoRÉGIS.</div>

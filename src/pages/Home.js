@@ -5,6 +5,7 @@ import MainAbout from "../components/MainAbout";
 import MainContact from "../components/MainContact";
 import Footer from "../components/Footer";
 import setTitle from "../components/SetTitle";
+import Address from "../components/Address";
 
 const Home = () => {
   setTitle("Home - autoRÉGIS");
@@ -15,6 +16,7 @@ const Home = () => {
       <MainStock />
       <MainAbout />
       <MainContact />
+      <Address />
       <Footer />
     </main>
   );

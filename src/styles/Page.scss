@@ -318,3 +318,12 @@
     }
   }
 }
+
+.map {
+  width: 100%;
+  iframe {
+    border: none;
+    height: 340px;
+    width: 100%;
+  }
+}

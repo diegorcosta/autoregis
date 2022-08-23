@@ -484,15 +484,6 @@ const Financiamento = () => {
                   />
                   <label for="60x">60x</label>
                 </div>
-                <div className="radio">
-                  <input
-                    id="72x"
-                    type="radio"
-                    name="financing-quota"
-                    required
-                  />
-                  <label for="72x">72x</label>
-                </div>
               </div>
               <button type="submit" name="submit">
                 Enviar

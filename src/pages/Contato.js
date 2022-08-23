@@ -8,6 +8,7 @@ import { RiInstagramFill, RiWhatsappFill } from "react-icons/ri";
 
 import "../styles/Page.scss";
 import WhatsAppButton from "../components/WhatsAppButton";
+import Address from "../components/Address";
 
 const Contato = () => {
   setTitle("Contato - autoRÉGIS");
@@ -93,6 +94,7 @@ const Contato = () => {
           </div>
         </div>
       </section>
+      <Address />
       <Footer />
     </main>
   );
