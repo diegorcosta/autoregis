@@ -8,7 +8,7 @@ import defaultImg from "../images/default-img.png";
 import loadingSVG from "../images/loading.svg";
 
 const MainStock = () => {
-  const url = "https://hlg-webmotors.sensedia.com/oauth/v1/access-token";
+  const url = "https://api-webmotors.sensedia.com/oauth/v1/access-token";
   const token =
     "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
 
@@ -16,7 +16,7 @@ const MainStock = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const endpoint = `https://hlg-webmotors.sensedia.com/site/v1/estoque?qty=9`;
+    const endpoint = `https://api-webmotors.sensedia.com/site/v1/estoque?qty=9`;
 
     const requestAPI = axios.create({
       baseURL: url,
@@ -28,8 +28,8 @@ const MainStock = () => {
 
     requestAPI
       .post(url, {
-        username: "teste@doin.com.br",
-        password: "Teste@123",
+        username: "autoregiscg@hotmail.com",
+        password: "AUTO1993regis@@",
         integracaoSite: "true",
         grant_type: "password",
       })

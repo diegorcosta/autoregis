@@ -8,7 +8,7 @@ import defaultImg from "../images/default-img.png";
 import loadingSVG from "../images/loading.svg";
 
 const Request = (props) => {
-  const url = "https://hlg-webmotors.sensedia.com/oauth/v1/access-token";
+  const url = "https://api-webmotors.sensedia.com/oauth/v1/access-token";
   const token =
     "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
 
@@ -19,7 +19,7 @@ const Request = (props) => {
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const endpoint = `https://hlg-webmotors.sensedia.com/site/v1/estoque?qty=${props.qty}&p=${current}`;
+    const endpoint = `https://api-webmotors.sensedia.com/site/v1/estoque?qty=${props.qty}&p=${current}`;
 
     const requestAPI = axios.create({
       baseURL: url,
@@ -31,8 +31,8 @@ const Request = (props) => {
 
     requestAPI
       .post(url, {
-        username: "teste@doin.com.br",
-        password: "Teste@123",
+        username: "autoregiscg@hotmail.com",
+        password: "AUTO1993regis@@",
         integracaoSite: "true",
         grant_type: "password",
       })
@@ -71,6 +71,11 @@ const Request = (props) => {
 
   return (
     <div className="vehicles">
+      <div className="search-bar">
+        <h3>
+          <b>{total}</b> veículos encontrados
+        </h3>
+      </div>
       <ul className="vehicles-cards">
         {vehicles?.map((car) => (
           <li key={car.id}>

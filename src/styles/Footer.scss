@@ -4,7 +4,6 @@
   width: 100%;
   .social-media {
     ul {
-      align-items: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -21,7 +20,6 @@
           display: flex;
           flex-direction: row;
           padding: 1rem 1rem;
-          transition: 0.2s ease all;
           svg {
             font-size: 1.2rem;
             margin-right: 0.5rem;
@@ -48,6 +46,8 @@
     background-color: #000;
     color: #fff;
     padding: 10px;
-    text-align: center;
+    @include md {
+      text-align: center;
+    }
   }
 }

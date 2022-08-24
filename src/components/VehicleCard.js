@@ -20,7 +20,7 @@ import loadingSVG from "../images/loading.svg";
 import "../styles/VehicleCard.scss";
 
 const VehicleCard = () => {
-  const url = "https://hlg-webmotors.sensedia.com/oauth/v1/access-token";
+  const url = "https://api-webmotors.sensedia.com/oauth/v1/access-token";
   const { id } = useParams();
   const token =
     "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
@@ -29,7 +29,7 @@ const VehicleCard = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const endpoint = `https://hlg-webmotors.sensedia.com/site/v1/estoque?id=${id}`;
+    const endpoint = `https://api-webmotors.sensedia.com/site/v1/estoque?id=${id}`;
 
     const requestAPI = axios.create({
       baseURL: url,
@@ -41,8 +41,8 @@ const VehicleCard = () => {
 
     requestAPI
       .post(url, {
-        username: "teste@doin.com.br",
-        password: "Teste@123",
+        username: "autoregiscg@hotmail.com",
+        password: "AUTO1993regis@@",
         integracaoSite: "true",
         grant_type: "password",
       })
@@ -142,13 +142,13 @@ const VehicleCard = () => {
               </li>
               <h3>
                 <AiFillTag className="price-tag" />
-                R$ {details.price}
+                R$ {details.price.slice(0, -3)}
               </h3>
               <div className="description">
                 <p>
-                  <b>Detalhes</b>
+                  <b>Acessórios</b>
                 </p>
-                <p>{details.details}</p>
+                <p>{details.vehicle.accessories}</p>
               </div>
               <div className="interest">
                 <p>Solicite uma proposta!</p>

@@ -90,3 +90,16 @@
     font-weight: 600;
   }
 }
+
+.search-bar {
+  background-color: #f3f3f3;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  h3 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    b {
+      color: $main-yellow;
+    }
+  }
+}
