@@ -78,32 +78,32 @@ const Request = (props) => {
       </div>
       <ul className="vehicles-cards">
         {vehicles?.map((car) => (
-          <li key={car.id}>
-            <div className="img-box">
-              {car.photos?.[0] ? (
-                <img
-                  src={car.photos[0]}
-                  alt={car.vehicle.model.name}
-                  onError={(e) => {
-                    e.target.src = defaultImg;
-                    e.target.onError = null;
-                  }}
-                />
-              ) : (
-                <img src={defaultImg} alt="Sem fotos" />
-              )}
-            </div>
-            <div className="vehicle-info">
-              <Link
-                to={{
-                  pathname: `/${car.id}`,
-                }}
-              >
+          <Link
+            to={{
+              pathname: `/${car.id}`,
+            }}
+          >
+            <li key={car.id}>
+              <div className="img-box">
+                {car.photos?.[0] ? (
+                  <img
+                    src={car.photos[0]}
+                    alt={car.vehicle.model.name}
+                    onError={(e) => {
+                      e.target.src = defaultImg;
+                      e.target.onError = null;
+                    }}
+                  />
+                ) : (
+                  <img src={defaultImg} alt="Sem fotos" />
+                )}
+              </div>
+              <div className="vehicle-info">
                 <h3>{car.vehicle.model.name}</h3>
-              </Link>
-              <h4>{car.vehicle.brand.name}</h4>
-            </div>
-          </li>
+                <h4>{car.vehicle.brand.name}</h4>
+              </div>
+            </li>
+          </Link>
         ))}
       </ul>
       <Pagination

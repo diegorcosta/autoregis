@@ -69,6 +69,9 @@ const VehicleCard = () => {
     // eslint-disable-next-line
   }, [id]);
 
+  const price = details.price;
+  const convertedPrice = +price;
+
   if (loading) {
     setTitle(`Veículos - autoRÉGIS`);
     return (
@@ -142,13 +145,17 @@ const VehicleCard = () => {
               </li>
               <h3>
                 <AiFillTag className="price-tag" />
-                R$ {details.price.slice(0, -3)}
+                R$ {convertedPrice.toLocaleString("pt-BR")}
               </h3>
               <div className="description">
                 <p>
                   <b>Acessórios</b>
                 </p>
-                <p>{details.vehicle.accessories}</p>
+                <ul className="acessories">
+                  {details.vehicle.acessories.name.map((acessorie, index) => (
+                    <li key={index}>- {acessorie}</li>
+                  ))}
+                </ul>
               </div>
               <div className="interest">
                 <p>Solicite uma proposta!</p>
