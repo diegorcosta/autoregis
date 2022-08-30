@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Pagination from "../components/Pagination";
+import SearchInput from "../components/SearchInput";
 
 import defaultImg from "../images/default-img.png";
 import loadingSVG from "../images/loading.svg";
@@ -14,12 +15,13 @@ const Request = (props) => {
 
   const [vehicles, setVehicles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [query, setQuery] = useState("");
   const [current, setCurrent] = useState(0);
   const [offset, setOffset] = useState(0);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
-    const endpoint = `https://api-webmotors.sensedia.com/site/v1/estoque?qty=${props.qty}&p=${current}`;
+    const endpoint = `https://api-webmotors.sensedia.com/site/v1/estoque?&query=${query}&qty=${props.qty}&p=${current}`;
 
     const requestAPI = axios.create({
       baseURL: url,
@@ -58,54 +60,62 @@ const Request = (props) => {
         console.log(error);
       });
     // eslint-disable-next-line
-  }, [current]);
-
-  if (loading) {
-    return (
-      <h3 className="loading">
-        <img src={loadingSVG} alt="Carregando" />
-        Carregando...
-      </h3>
-    );
-  }
+  }, [current, query]);
 
   return (
     <div className="vehicles">
       <div className="search-bar">
-        <h3>
-          <b>{total}</b> veículos encontrados
-        </h3>
+        <SearchInput
+          value={query}
+          onChange={(search) => {
+            setQuery(search);
+            setLoading(true);
+          }}
+        />
       </div>
-      <ul className="vehicles-cards">
-        {vehicles?.map((car) => (
-          <Link
-            to={{
-              pathname: `/${car.id}`,
-            }}
-          >
-            <li key={car.id}>
-              <div className="img-box">
-                {car.photos?.[0] ? (
-                  <img
-                    src={car.photos[0]}
-                    alt={car.vehicle.model.name}
-                    onError={(e) => {
-                      e.target.src = defaultImg;
-                      e.target.onError = null;
-                    }}
-                  />
-                ) : (
-                  <img src={defaultImg} alt="Sem fotos" />
-                )}
-              </div>
-              <div className="vehicle-info">
-                <h3>{car.vehicle.model.name}</h3>
-                <h4>{car.vehicle.brand.name}</h4>
-              </div>
-            </li>
-          </Link>
-        ))}
-      </ul>
+      {loading ? (
+        <h3 className="loading">
+          <img src={loadingSVG} alt="Carregando" />
+          Carregando...
+        </h3>
+      ) : (
+        <div>
+          <h3 className="total-items">
+            <b>{total}</b> veículos encontrados
+          </h3>
+          <ul className="vehicles-cards">
+            {vehicles?.map((car) => (
+              <Link
+                to={{
+                  pathname: `/${car.id}`,
+                }}
+                key={car.id}
+              >
+                <li>
+                  <div className="img-box">
+                    {car.photos?.[0] ? (
+                      <img
+                        src={car.photos[0]}
+                        alt={car.vehicle.model.name}
+                        onError={(e) => {
+                          e.target.src = defaultImg;
+                          e.target.onError = null;
+                        }}
+                      />
+                    ) : (
+                      <img src={defaultImg} alt="Sem fotos" />
+                    )}
+                  </div>
+                  <div className="vehicle-info">
+                    <h3>{car.vehicle.model.name}</h3>
+                    <h4>{car.vehicle.brand.name}</h4>
+                  </div>
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+      )}
       <Pagination
         limit={props.qty}
         total={total}

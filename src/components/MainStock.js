@@ -81,8 +81,9 @@ const MainStock = () => {
                 to={{
                   pathname: `/${car.id}`,
                 }}
+                key={car.id}
               >
-                <li key={car.id}>
+                <li>
                   <div className="img-box">
                     {car.photos?.[0] ? (
                       <img

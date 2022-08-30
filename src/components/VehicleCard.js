@@ -134,7 +134,7 @@ const VehicleCard = () => {
               <li>
                 <IoSpeedometer />
                 <div>
-                  <p>{details.vehicle.km} Km</p>
+                  <p>{details.vehicle.km.toLocaleString("pt-BR")} Km</p>
                 </div>
               </li>
               <li>

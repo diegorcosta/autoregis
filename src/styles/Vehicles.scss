@@ -91,15 +91,39 @@
   }
 }
 
+.total-items {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  b {
+    color: $main-yellow;
+    font-weight: 600;
+  }
+}
+
 .search-bar {
-  background-color: #f3f3f3;
-  padding: 2rem;
   margin-bottom: 1rem;
-  h3 {
-    font-size: 1.2rem;
-    font-weight: lighter;
-    b {
-      color: $main-yellow;
-    }
+  input,
+  select,
+  textarea {
+    background-color: #f8f8f8;
+    border: 1px solid #c4c4c4;
+    box-sizing: border-box;
+    font-family: $Montserrat;
+    font-size: 1.1rem;
+    height: 60px;
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+  }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    background-color: #f3f3f3;
+    outline: none;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #000;
   }
 }
