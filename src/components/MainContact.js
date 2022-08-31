@@ -1,9 +1,56 @@
+import React, { useEffect, useRef, useState } from "react";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { RiInstagramFill, RiWhatsappFill } from "react-icons/ri";
+import { FaCheck } from "react-icons/fa";
+import InputMask from "react-input-mask";
+import emailjs from "emailjs-com";
 
 import "../styles/MainContact.scss";
 
 const MainContact = () => {
+  const form = useRef();
+
+  const [status, setStatus] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_4ypfea9",
+        "template_ddmz3ze",
+        form.current,
+        "ehqu_S93BUeCGqsjf"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setStatus("SUCCESS");
+    e.target.reset();
+  };
+
+  useEffect(() => {
+    if (status === "SUCCESS") {
+      setTimeout(() => {
+        setStatus("");
+      }, 5000);
+    }
+  }, [status]);
+
+  const renderAlert = () => (
+    <div className="render-alert">
+      <p>
+        <FaCheck />
+        Mensagem enviada com sucesso!
+      </p>
+    </div>
+  );
+
   return (
     <section className="main-contact">
       <div className="container">
@@ -14,23 +61,24 @@ const MainContact = () => {
         </p>
         <div className="contact-form-area">
           <div>
-            <form>
+            <form ref={form} onSubmit={sendEmail}>
               <input type="name" placeholder="Nome" name="name" required />
               <input type="email" placeholder="E-mail" name="email" required />
-              <input
-                type="phone"
+              <InputMask
+                mask="(99) 9 9999-9999"
                 placeholder="Telefone"
                 name="phone"
+                type="tel"
                 required
               />
               <select type="subject" name="subject" required>
                 <option selected disabled>
                   Assunto
                 </option>
-                <option value="compra">Compra</option>
-                <option value="venda">Venda</option>
-                <option value="financiamento">Financiamento</option>
-                <option value="outros">Outros</option>
+                <option value="Compra">Compra</option>
+                <option value="Venda">Venda</option>
+                <option value="Financiamento">Financiamento</option>
+                <option value="Outros">Outros</option>
               </select>
               <textarea
                 type="text"
@@ -42,6 +90,7 @@ const MainContact = () => {
               <button type="submit" name="submit">
                 Enviar
               </button>
+              {status && renderAlert()}
             </form>
           </div>
           <div>

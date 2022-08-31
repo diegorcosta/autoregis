@@ -80,6 +80,10 @@
       }
     }
     .contact-list {
+      display: none;
+      @include md {
+        display: initial;
+      }
       li {
         align-items: flex-start;
         display: flex;
@@ -98,5 +102,14 @@
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.render-alert {
+  margin: 2rem 0;
+  text-align: left;
+  svg {
+    color: yellowgreen;
+    margin-right: 1rem;
   }
 }
