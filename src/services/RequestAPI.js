@@ -81,7 +81,7 @@ const Request = (props) => {
       ) : (
         <div>
           <h3 className="total-items">
-            <b>{total}</b> veículos encontrados
+            <b>{total}</b> veículos encontrados.
           </h3>
           <ul className="vehicles-cards">
             {vehicles?.map((car) => (
