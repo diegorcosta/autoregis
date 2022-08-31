@@ -260,6 +260,12 @@
         font-weight: 600;
         margin-left: 10px;
       }
+      .mb-span {
+        display: none;
+        @include md {
+          display: initial;
+        }
+      }
       @include lg {
         font-size: 1.2rem;
       }

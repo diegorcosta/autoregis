@@ -20,10 +20,10 @@ const Empresa = () => {
 
     emailjs
       .sendForm(
-        "service_4ypfea9",
-        "template_ddmz3ze",
+        "service_ebn7vib",
+        "template_0ceik12",
         form.current,
-        "ehqu_S93BUeCGqsjf"
+        "G5PjV11ylL8LUFPbQ"
       )
       .then(
         (result) => {
@@ -144,86 +144,59 @@ const Empresa = () => {
                 </div>
               </div>
               <label for="first-owner">
-                Você é o primeiro proprietário? <span>(campo obrigatório)</span>
+                Você é o primeiro proprietário?{" "}
+                <span className="mb-span">(campo obrigatório)</span>
               </label>
               <div className="radio-input">
                 <div className="radio">
-                  <input
-                    id="owner-yes"
-                    type="radio"
-                    name="first-owner"
-                    required
-                  />
-                  <label for="owner-yes">Sim</label>
+                  <input value="Sim" type="radio" name="first-owner" required />
+                  <label for="Sim">Sim</label>
                 </div>
                 <div className="radio">
-                  <input
-                    id="owner-no"
-                    type="radio"
-                    name="first-owner"
-                    required
-                  />
-                  <label for="owner-no">Não</label>
+                  <input value="Não" type="radio" name="first-owner" required />
+                  <label for="Não">Não</label>
                 </div>
               </div>
               <label for="dirt-stains">
-                O estofamento possui manchas? <span>(campo obrigatório)</span>
+                O estofamento possui manchas?{" "}
+                <span className="mb-span">(campo obrigatório)</span>
               </label>
               <div className="radio-input">
                 <div className="radio">
-                  <input
-                    id="stains-yes"
-                    type="radio"
-                    name="dirt-stains"
-                    required
-                  />
-                  <label for="stains-yes">Sim</label>
+                  <input value="Sim" type="radio" name="dirt-stains" required />
+                  <label for="Sim">Sim</label>
                 </div>
                 <div className="radio">
-                  <input
-                    id="stains-no"
-                    type="radio"
-                    name="dirt-stains"
-                    required
-                  />
-                  <label for="stains-no">Não</label>
+                  <input value="Não" type="radio" name="dirt-stains" required />
+                  <label for="Não">Não</label>
                 </div>
               </div>
               <label for="insurance">
-                O veículo tem seguro? <span>(campo obrigatório)</span>
+                O veículo tem seguro?{" "}
+                <span className="mb-span">(campo obrigatório)</span>
               </label>
               <div className="radio-input">
                 <div className="radio">
-                  <input
-                    id="insurance-yes"
-                    type="radio"
-                    name="insurance"
-                    required
-                  />
-                  <label for="insurance-yes">Sim</label>
+                  <input value="Sim" type="radio" name="insurance" required />
+                  <label for="Sim">Sim</label>
                 </div>
                 <div className="radio">
-                  <input
-                    id="insurance-no"
-                    type="radio"
-                    name="insurance"
-                    required
-                  />
-                  <label for="insurance-no">Não</label>
+                  <input value="Não" type="radio" name="insurance" required />
+                  <label for="Não">Não</label>
                 </div>
               </div>
               <label for="stolen">
                 O veículo já foi recuperado de roubo?{" "}
-                <span>(campo obrigatório)</span>
+                <span className="mb-span">(campo obrigatório)</span>
               </label>
               <div className="radio-input">
                 <div className="radio">
-                  <input id="stolen-yes" type="radio" name="stolen" required />
-                  <label for="stolen-yes">Sim</label>
+                  <input value="Sim" type="radio" name="stolen" required />
+                  <label for="Sim">Sim</label>
                 </div>
                 <div className="radio">
-                  <input id="stolen-no" type="radio" name="stolen" required />
-                  <label for="stolen-no">Não</label>
+                  <input value="Não" type="radio" name="stolen" required />
+                  <label for="Não">Não</label>
                 </div>
               </div>
               <button type="submit" name="submit">

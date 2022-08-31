@@ -19,10 +19,10 @@ const Financiamento = () => {
 
     emailjs
       .sendForm(
-        "service_4ypfea9",
-        "template_ddmz3ze",
+        "service_ebn7vib",
+        "template_ujf682m",
         form.current,
-        "ehqu_S93BUeCGqsjf"
+        "G5PjV11ylL8LUFPbQ"
       )
       .then(
         (result) => {
@@ -130,7 +130,7 @@ const Financiamento = () => {
               <div className="radio-input">
                 <div className="radio">
                   <input
-                    id="72x"
+                    value="6x"
                     type="radio"
                     name="financing-quota"
                     required
@@ -139,7 +139,7 @@ const Financiamento = () => {
                 </div>
                 <div className="radio">
                   <input
-                    id="12x"
+                    value="12x"
                     type="radio"
                     name="financing-quota"
                     required
@@ -148,7 +148,7 @@ const Financiamento = () => {
                 </div>
                 <div className="radio">
                   <input
-                    id="24x"
+                    value="24x"
                     type="radio"
                     name="financing-quota"
                     required
@@ -157,7 +157,7 @@ const Financiamento = () => {
                 </div>
                 <div className="radio">
                   <input
-                    id="48x"
+                    value="48x"
                     type="radio"
                     name="financing-quota"
                     required
@@ -166,7 +166,7 @@ const Financiamento = () => {
                 </div>
                 <div className="radio">
                   <input
-                    id="60x"
+                    value="60x"
                     type="radio"
                     name="financing-quota"
                     required

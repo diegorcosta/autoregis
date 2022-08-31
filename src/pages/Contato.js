@@ -26,7 +26,7 @@ const Contato = () => {
 
     emailjs
       .sendForm(
-        "service_4ypfea9",
+        "service_oug6r9x",
         "template_ddmz3ze",
         form.current,
         "ehqu_S93BUeCGqsjf"
@@ -74,7 +74,6 @@ const Contato = () => {
                   formulário abaixo ou fale com um dos nossos consultores
                   através do WhatsApp.
                 </p>
-                {status && renderAlert()}
                 <input type="name" placeholder="Nome" name="name" required />
                 <input
                   type="email"

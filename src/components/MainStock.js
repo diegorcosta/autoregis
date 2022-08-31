@@ -99,7 +99,9 @@ const MainStock = () => {
                     )}
                   </div>
                   <div className="vehicle-info">
-                    <h3>{car.vehicle.model.name}</h3>
+                    <h3>
+                      {car.vehicle.model.name} {car.vehicle.year_model}
+                    </h3>
                     <h4>{car.vehicle.brand.name}</h4>
                   </div>
                 </li>
