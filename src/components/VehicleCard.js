@@ -12,7 +12,7 @@ import Header from "../components/Header";
 import PageTitle from "../components/PageTitle";
 import Footer from "../components/Footer";
 import setTitle from "../components/SetTitle";
-import Gallery from "./Gallery";
+import ImageGallery from "react-image-gallery";
 
 import defaultImg from "../images/default-img.png";
 import loadingSVG from "../images/loading.svg";
@@ -101,7 +101,12 @@ const VehicleCard = () => {
           <div className="vehicle">
             <div className="gallery">
               {details.photos?.[0] ? (
-                <Gallery galleryImages={details.photos} />
+                <ImageGallery
+                  items={details.photos.map((photo) => ({
+                    original: photo,
+                    thumbnail: photo,
+                  }))}
+                />
               ) : (
                 <img
                   className="default-image"
