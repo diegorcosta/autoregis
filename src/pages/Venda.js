@@ -149,12 +149,24 @@ const Empresa = () => {
               </label>
               <div className="radio-input">
                 <div className="radio">
-                  <input value="Sim" type="radio" name="first-owner" required />
-                  <label for="Sim">Sim</label>
+                  <input
+                    id="1sim"
+                    value="Sim"
+                    type="radio"
+                    name="first-owner"
+                    required
+                  />
+                  <label for="1sim">Sim</label>
                 </div>
                 <div className="radio">
-                  <input value="Não" type="radio" name="first-owner" required />
-                  <label for="Não">Não</label>
+                  <input
+                    id="1nao"
+                    value="Não"
+                    type="radio"
+                    name="first-owner"
+                    required
+                  />
+                  <label for="1nao">Não</label>
                 </div>
               </div>
               <label for="dirt-stains">
@@ -163,12 +175,24 @@ const Empresa = () => {
               </label>
               <div className="radio-input">
                 <div className="radio">
-                  <input value="Sim" type="radio" name="dirt-stains" required />
-                  <label for="Sim">Sim</label>
+                  <input
+                    id="2sim"
+                    value="Sim"
+                    type="radio"
+                    name="dirt-stains"
+                    required
+                  />
+                  <label for="2sim">Sim</label>
                 </div>
                 <div className="radio">
-                  <input value="Não" type="radio" name="dirt-stains" required />
-                  <label for="Não">Não</label>
+                  <input
+                    id="2nao"
+                    value="Não"
+                    type="radio"
+                    name="dirt-stains"
+                    required
+                  />
+                  <label for="2nao">Não</label>
                 </div>
               </div>
               <label for="insurance">
@@ -177,12 +201,24 @@ const Empresa = () => {
               </label>
               <div className="radio-input">
                 <div className="radio">
-                  <input value="Sim" type="radio" name="insurance" required />
-                  <label for="Sim">Sim</label>
+                  <input
+                    id="3sim"
+                    value="Sim"
+                    type="radio"
+                    name="insurance"
+                    required
+                  />
+                  <label for="3sim">Sim</label>
                 </div>
                 <div className="radio">
-                  <input value="Não" type="radio" name="insurance" required />
-                  <label for="Não">Não</label>
+                  <input
+                    id="3nao"
+                    value="Não"
+                    type="radio"
+                    name="insurance"
+                    required
+                  />
+                  <label for="3nao">Não</label>
                 </div>
               </div>
               <label for="stolen">
@@ -191,12 +227,24 @@ const Empresa = () => {
               </label>
               <div className="radio-input">
                 <div className="radio">
-                  <input value="Sim" type="radio" name="stolen" required />
-                  <label for="Sim">Sim</label>
+                  <input
+                    id="4sim"
+                    value="Sim"
+                    type="radio"
+                    name="stolen"
+                    required
+                  />
+                  <label for="4sim">Sim</label>
                 </div>
                 <div className="radio">
-                  <input value="Não" type="radio" name="stolen" required />
-                  <label for="Não">Não</label>
+                  <input
+                    id="4nao"
+                    value="Não"
+                    type="radio"
+                    name="stolen"
+                    required
+                  />
+                  <label for="4nao">Não</label>
                 </div>
               </div>
               <button type="submit" name="submit">

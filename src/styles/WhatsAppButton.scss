@@ -8,9 +8,12 @@
   cursor: pointer;
   display: flex;
   font-family: $Montserrat;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 600;
   height: 50px;
+  @include md {
+    font-size: 1.4rem;
+  }
   svg {
     background-color: #075e54;
     fill: #fff;

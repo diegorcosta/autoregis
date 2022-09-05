@@ -96,6 +96,15 @@
         p {
           margin-top: 5px;
           margin-left: 20px;
+          a,
+          a:visited {
+            color: #000;
+            text-decoration: underline;
+          }
+          a:hover,
+          a:active {
+            text-decoration: none;
+          }
         }
       }
       li:last-child {

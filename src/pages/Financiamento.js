@@ -131,6 +131,7 @@ const Financiamento = () => {
                 <div className="radio">
                   <input
                     value="6x"
+                    id="6x"
                     type="radio"
                     name="financing-quota"
                     required
@@ -140,6 +141,7 @@ const Financiamento = () => {
                 <div className="radio">
                   <input
                     value="12x"
+                    id="12x"
                     type="radio"
                     name="financing-quota"
                     required
@@ -149,6 +151,7 @@ const Financiamento = () => {
                 <div className="radio">
                   <input
                     value="24x"
+                    id="24x"
                     type="radio"
                     name="financing-quota"
                     required
@@ -158,6 +161,7 @@ const Financiamento = () => {
                 <div className="radio">
                   <input
                     value="48x"
+                    id="48x"
                     type="radio"
                     name="financing-quota"
                     required
@@ -167,6 +171,7 @@ const Financiamento = () => {
                 <div className="radio">
                   <input
                     value="60x"
+                    id="60x"
                     type="radio"
                     name="financing-quota"
                     required

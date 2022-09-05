@@ -5,7 +5,7 @@ import PageTitle from "../components/PageTitle";
 import setTitle from "../components/SetTitle";
 
 import { MdEmail, MdLocationOn } from "react-icons/md";
-import { RiInstagramFill, RiWhatsappFill } from "react-icons/ri";
+import { RiInstagramFill } from "react-icons/ri";
 import { FaCheck } from "react-icons/fa";
 import InputMask from "react-input-mask";
 import emailjs from "emailjs-com";
@@ -26,10 +26,10 @@ const Contato = () => {
 
     emailjs
       .sendForm(
-        "service_oug6r9x",
-        "template_ddmz3ze",
+        "service_yv6mbjb",
+        "template_iyz7i39",
         form.current,
-        "ehqu_S93BUeCGqsjf"
+        "3Ga8YTtoPSXEHcQOI"
       )
       .then(
         (result) => {
@@ -113,7 +113,10 @@ const Contato = () => {
             <div className="sidebar">
               <ul className="contact-list">
                 <li>
-                  <WhatsAppButton />
+                  <WhatsAppButton number="5583999129196" title="Veículos" />
+                </li>
+                <li>
+                  <WhatsAppButton number="5583999355058" title="Autopeças" />
                 </li>
                 <li>
                   <MdLocationOn />
@@ -128,14 +131,14 @@ const Contato = () => {
                   <p>autoregiscg@hotmail.com</p>
                 </li>
                 <li>
-                  <RiWhatsappFill />
-                  <p>(83) 9 9935-5058</p>
-                </li>
-                <li>
                   <RiInstagramFill />
                   <div>
-                    <p>@autoregiscg</p>
-                    <p>@autoregisparts</p>
+                    <a href="www.instagram.com/autoregiscg" rel="noreferrer">
+                      <p>@autoregiscg</p>
+                    </a>
+                    <a href="www.instagram.com/autoregisparts" rel="noreferrer">
+                      <p>@autoregisparts</p>
+                    </a>
                   </div>
                 </li>
               </ul>

@@ -30,6 +30,12 @@
       top: 0;
       width: 60%;
       z-index: 998;
+      .home-menu {
+        display: none;
+        @include lg {
+          display: initial;
+        }
+      }
       ul {
         margin-top: 40px;
         li {

@@ -116,7 +116,10 @@ const VehicleCard = () => {
               <li>
                 <IoCalendar />
                 <div>
-                  <p>Ano: {details.vehicle.year_model}</p>
+                  <p>
+                    Ano: {details.vehicle.year_manufacture} /{" "}
+                    {details.vehicle.year_model}
+                  </p>
                 </div>
               </li>
               <li>

@@ -3,16 +3,13 @@ import { BsWhatsapp } from "react-icons/bs";
 
 import "../styles/WhatsAppButton.scss";
 
-const WhatsAppButton = () => {
+const WhatsAppButton = ({ number, title }) => {
+  const whatsappNumber = `https://api.whatsapp.com/send?phone=${number}`;
   return (
-    <a
-      href="https://api.whatsapp.com/send?phone=558399129196"
-      target="_blank"
-      rel="noreferrer"
-    >
+    <a href={whatsappNumber} target="_blank" rel="noreferrer">
       <button className="whatsapp-button" type="button">
         <BsWhatsapp />
-        <span>(83) 9912-9196</span>
+        <span>{title}</span>
       </button>
     </a>
   );

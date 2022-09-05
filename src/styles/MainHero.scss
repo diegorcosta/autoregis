@@ -40,9 +40,14 @@
       display: flex;
       justify-content: space-between;
       .first-column {
-        margin: 0 auto;
+        display: flex;
+        width: 100%;
+        gap: 1.4rem;
+        justify-content: center;
         @include md {
           margin-left: 0;
+          justify-content: flex-start;
+          width: 40%;
         }
       }
       .second-column {

@@ -138,6 +138,19 @@
           color: $main-yellow;
           font-size: 1.8rem;
         }
+        a,
+        a:visited {
+          p {
+            color: #000;
+            text-decoration: underline;
+          }
+        }
+        a:hover,
+        a:active {
+          p {
+            text-decoration: none;
+          }
+        }
         p {
           margin-top: 5px;
           margin-left: 20px;

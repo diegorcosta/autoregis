@@ -76,37 +76,44 @@ const MainStock = () => {
         <h2 className="title">Novidades do estoque</h2>
         <div className="vehicles">
           <ul className="vehicles-cards">
-            {vehicles?.map((car) => (
-              <Link
-                to={{
-                  pathname: `/${car.id}`,
-                }}
-                key={car.id}
-              >
-                <li>
-                  <div className="img-box">
-                    {car.photos?.[0] ? (
-                      <img
-                        src={car.photos[0]}
-                        alt={car.vehicle.model.name}
-                        onError={(e) => {
-                          e.target.src = defaultImg;
-                          e.target.onError = null;
-                        }}
-                      />
-                    ) : (
-                      <img src={defaultImg} alt="Sem fotos" />
-                    )}
-                  </div>
-                  <div className="vehicle-info">
-                    <h3>
-                      {car.vehicle.model.name} {car.vehicle.year_model}
-                    </h3>
-                    <h4>{car.vehicle.brand.name}</h4>
-                  </div>
-                </li>
-              </Link>
-            ))}
+            {vehicles?.map((car) => {
+              const price = car.price;
+              const convertedPrice = +price;
+              return (
+                <Link
+                  to={{
+                    pathname: `/${car.id}`,
+                  }}
+                  key={car.id}
+                >
+                  <li>
+                    <div className="img-box">
+                      {car.photos?.[0] ? (
+                        <img
+                          src={car.photos[0]}
+                          alt={car.vehicle.model.name}
+                          onError={(e) => {
+                            e.target.src = defaultImg;
+                            e.target.onError = null;
+                          }}
+                        />
+                      ) : (
+                        <img src={defaultImg} alt="Sem fotos" />
+                      )}
+                    </div>
+                    <div className="vehicle-info">
+                      <h3>
+                        {car.vehicle.model.name} {car.vehicle.year_model}
+                      </h3>
+                      <h4>
+                        {car.vehicle.brand.name} - R${" "}
+                        {convertedPrice.toLocaleString("pt-BR")}
+                      </h4>
+                    </div>
+                  </li>
+                </Link>
+              );
+            })}
           </ul>
         </div>
         <p className="main-text">
