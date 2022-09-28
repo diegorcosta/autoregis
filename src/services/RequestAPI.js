@@ -19,9 +19,10 @@ const Request = (props) => {
   const [current, setCurrent] = useState(0);
   const [offset, setOffset] = useState(0);
   const [total, setTotal] = useState(0);
+  const [brand, setBrand] = useState("");
 
   useEffect(() => {
-    const endpoint = `https://api-webmotors.sensedia.com/site/v1/estoque?&query=${query}&qty=${props.qty}&p=${current}`;
+    const endpoint = `https://api-webmotors.sensedia.com/site/v1/estoque?&query=${query}&brand=${brand}&qty=${props.qty}&p=${current}`;
 
     const requestAPI = axios.create({
       baseURL: url,
@@ -60,16 +61,44 @@ const Request = (props) => {
         console.log(error);
       });
     // eslint-disable-next-line
-  }, [current, query]);
+  }, [current, query, brand]);
+
+  function handleSelect(e) {
+    setBrand(e.target.value);
+    setLoading(true);
+  }
 
   return (
     <div className="vehicles">
       <div className="search-bar">
+        <select type="text" name="brand" onChange={handleSelect}>
+          <option selected disabled>
+            Marca
+          </option>
+          <option value="Audi">Audi</option>
+          <option value="BMW">BMW</option>
+          <option value="Chery">Chery</option>
+          <option value="Chevrolet">Chevrolet</option>
+          <option value="FIAT">FIAT</option>
+          <option value="Ford">Ford</option>
+          <option value="Jeep">Jeep</option>
+          <option value="Volkswagen">Volkswagen</option>
+          <option value="Land Rover">Land Rover</option>
+          <option value="Mercedes-Benz">Mercedes-Benz</option>
+          <option value="Mitsubishi">Mitsubishi</option>
+          <option value="Nissan">Nissan</option>
+          <option value="Peugeot">Peugeot</option>
+          <option value="Renault">Renault</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Hyundai">Hyundai</option>
+          <option value="Honda">Honda</option>
+        </select>
         <SearchInput
           value={query}
           onChange={(search) => {
             setQuery(search);
             setLoading(true);
+            setCurrent(1);
           }}
         />
       </div>

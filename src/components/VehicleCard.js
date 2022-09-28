@@ -102,6 +102,8 @@ const VehicleCard = () => {
             <div className="gallery">
               {details.photos?.[0] ? (
                 <ImageGallery
+                  useBrowserFullscreen={false}
+                  showPlayButton={false}
                   items={details.photos.map((photo) => ({
                     original: photo,
                     thumbnail: photo,

@@ -13,7 +13,7 @@ const SearchInput = ({ value, onChange }) => {
   return (
     <input
       type="search"
-      placeholder="Filtrar por modelo, marca ou preço..."
+      placeholder="Filtrar por palavra-chave..."
       value={displayValue}
       onChange={handleChange}
     />

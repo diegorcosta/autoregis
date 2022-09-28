@@ -102,6 +102,8 @@
 }
 
 .search-bar {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1rem;
   input,
   select,
@@ -114,7 +116,22 @@
     height: 60px;
     margin-top: 20px;
     padding: 20px;
+  }
+  select {
     width: 100%;
+  }
+  input {
+    width: 100%;
+  }
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+    select {
+      width: 33%;
+    }
+    input {
+      width: 66%;
+    }
   }
   input:focus,
   select:focus,
