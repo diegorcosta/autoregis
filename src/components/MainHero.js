@@ -20,8 +20,16 @@ const MainHero = () => {
       <div className="second-row">
         <div className="container">
           <div className="first-column">
-            <WhatsAppButton number="5583999129196" title="Veículos" />
-            <WhatsAppButton number="5583999355058" title="Autopeças" />
+            <WhatsAppButton
+              number="5583999129196"
+              title="Veículos"
+              showNumber="(83) 9 9912-9196"
+            />
+            <WhatsAppButton
+              number="5583999355058"
+              title="Autopeças"
+              showNumber="(83) 9 9935-5058"
+            />
           </div>
           <div className="second-column">
             <img src={heroCar} alt="Foto de uma BMW G3 Competition" />

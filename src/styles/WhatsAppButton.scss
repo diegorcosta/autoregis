@@ -10,7 +10,7 @@
   font-family: $Montserrat;
   font-size: 1rem;
   font-weight: 600;
-  height: 50px;
+  height: 60px;
   @include md {
     font-size: 1.4rem;
   }
@@ -18,10 +18,16 @@
     background-color: #075e54;
     fill: #fff;
     padding: 12px;
-    height: 50px;
+    height: 60px;
     width: 50px;
   }
-  span {
+  h2 {
+    font-size: 1rem;
+    font-weight: lighter;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
     padding: 0 20px;
   }
 }

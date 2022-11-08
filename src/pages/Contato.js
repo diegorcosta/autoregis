@@ -113,10 +113,18 @@ const Contato = () => {
             <div className="sidebar">
               <ul className="contact-list">
                 <li>
-                  <WhatsAppButton number="5583999129196" title="Veículos" />
+                  <WhatsAppButton
+                    number="5583999129196"
+                    title="Veículos"
+                    showNumber="(83) 9 9912-9196"
+                  />
                 </li>
                 <li>
-                  <WhatsAppButton number="5583999355058" title="Autopeças" />
+                  <WhatsAppButton
+                    number="5583999355058"
+                    title="Autopeças"
+                    showNumber="(83) 9 9935-5058"
+                  />
                 </li>
                 <li>
                   <MdLocationOn />

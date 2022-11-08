@@ -5,6 +5,7 @@ import Veiculos from "../pages/Veiculos";
 import Financiamento from "../pages/Financiamento";
 import Venda from "../pages/Venda";
 import Contato from "../pages/Contato";
+import Loja from "../pages/Loja";
 import VehicleCard from "../components/VehicleCard";
 
 const AppRoutes = () => {
@@ -12,7 +13,6 @@ const AppRoutes = () => {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
-
         <Route path="/home" element={<Home />} />
         <Route path="/empresa" element={<Empresa />} />
         <Route path="/veiculos" element={<Veiculos />} />
@@ -20,6 +20,7 @@ const AppRoutes = () => {
         <Route path="/financiamento" element={<Financiamento />} />
         <Route path="/venda" element={<Venda />} />
         <Route path="/contato" element={<Contato />} />
+        <Route path="/loja" element={<Loja />} />
       </Routes>
     </BrowserRouter>
   );

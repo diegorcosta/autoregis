@@ -1,4 +1,4 @@
-import { RiInstagramFill, RiWhatsappFill } from "react-icons/ri";
+import { RiInstagramFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 
 import "../styles/Footer.scss";
@@ -38,7 +38,7 @@ const Footer = () => {
                 autoregisparts
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="https://api.whatsapp.com/send?phone=558399355058"
                 target="_blank"
@@ -47,7 +47,7 @@ const Footer = () => {
                 <RiWhatsappFill />
                 (83) 9 9935-5058
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
