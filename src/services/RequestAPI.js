@@ -35,7 +35,7 @@ const Request = (props) => {
     requestAPI
       .post(url, {
         username: "autoregiscg@hotmail.com",
-        password: "AUTO1993regis@@",
+        password: "AUTO1993regis!!",
         integracaoSite: "true",
         grant_type: "password",
       })
