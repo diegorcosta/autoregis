@@ -131,7 +131,7 @@ const Contato = () => {
                   <div>
                     <p>R. Janúncio Ferreira, 600 - Centro</p>
                     <p>Campina Grande - PB</p>
-                    <p>CEP 58400-198</p>
+                    <p>CEP 58400-158</p>
                   </div>
                 </li>
                 <li>
