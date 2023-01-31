@@ -11,8 +11,6 @@ const MainStock = () => {
   const url = "https://api-webmotors.sensedia.com/oauth/v1/access-token";
   const token =
     "ZDMxOTZiMjEtNzYzOS0zMWZkLWExZGQtN2Q1YTcyZjUyYjNkOmU0OTZmZGVhLTEzOWEtMzI2Ny1iNGRjLTAzMmM3NzU3NGY5Yw==";
-  // const token =
-  //   "MTJjMWI3N2ItZjk1Mi0zZTVhLWFjNzktNGUwNDIyNGJhNTNjOjU1ZDI1YWQ3LWJiMGUtM2RlYy04N2NjLTRkZTNiMGY0MjU5NQ==";
 
   const [vehicles, setVehicles] = useState([]);
   const [loading, setLoading] = useState(true);
